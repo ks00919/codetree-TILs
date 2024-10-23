@@ -28,12 +28,14 @@ public class Main {
 
             for (int j = 0; j < n; j++) {
                 String number = numbers.get(j);
-                if (number.length() < i) {
+                int index = number.length() - i - 1;
+
+                if (index < 0) {
                     arrays[0].add(number);
                     continue;
                 }
 
-                int pos = number.charAt(i) - '0';
+                int pos = number.charAt(index) - '0';
                 arrays[pos].add(number);
             }
 
